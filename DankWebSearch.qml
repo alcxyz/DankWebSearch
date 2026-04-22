@@ -45,7 +45,8 @@ QtObject {
                     icon: e.icon,
                     comment: e.prefix ? ("Prefix: " + e.prefix) : "Default engine",
                     action: "info:",
-                    categories: ["Web Search"]
+                    categories: ["Web Search"],
+                    _preScored: 1000
                 };
             });
         }
@@ -62,7 +63,8 @@ QtObject {
                 icon: "material:open_in_browser",
                 comment: url,
                 action: "open:" + url,
-                categories: ["Web Search"]
+                categories: ["Web Search"],
+                _preScored: 1000
             }];
         }
 
@@ -85,7 +87,8 @@ QtObject {
                 icon: selectedEngine.icon,
                 comment: "Type your query",
                 action: "info:",
-                categories: ["Web Search"]
+                categories: ["Web Search"],
+                _preScored: 1000
             }];
         }
 
@@ -97,7 +100,8 @@ QtObject {
             icon: selectedEngine.icon,
             comment: "Search " + selectedEngine.name,
             action: "open:" + selectedEngine.url + encodeURIComponent(searchQuery),
-            categories: ["Web Search"]
+            categories: ["Web Search"],
+            _preScored: 1000
         });
 
         // Other engines
@@ -108,7 +112,8 @@ QtObject {
                     icon: engines[j].icon,
                     comment: "Search " + engines[j].name,
                     action: "open:" + engines[j].url + encodeURIComponent(searchQuery),
-                    categories: ["Web Search"]
+                    categories: ["Web Search"],
+                    _preScored: 900
                 });
             }
         }
