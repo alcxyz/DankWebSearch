@@ -2,7 +2,7 @@
     "id": "dankWebSearch",
     "name": "Web Search",
     "description": "Search the web from the launcher with multiple engine support",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "alcxyz",
     "icon": "travel_explore",
     "type": "launcher",
