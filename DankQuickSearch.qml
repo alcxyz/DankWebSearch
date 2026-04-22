@@ -7,7 +7,7 @@ QtObject {
     id: root
 
     property var pluginService: null
-    property string pluginId: "dankWebSearch"
+    property string pluginId: "dankQuickSearch"
     property string trigger: "!"
     property string defaultEngine: "duckduckgo"
 
@@ -16,7 +16,6 @@ QtObject {
     property var engines: [
         { id: "duckduckgo", name: "DuckDuckGo", icon: "material:search", prefix: "", url: "https://duckduckgo.com/?q=" },
         { id: "google", name: "Google", icon: "material:search", prefix: "g", url: "https://www.google.com/search?q=" },
-        { id: "wikipedia", name: "Wikipedia", icon: "material:menu_book", prefix: "w", url: "https://en.wikipedia.org/w/index.php?search=" },
         { id: "github", name: "GitHub", icon: "material:code", prefix: "gh", url: "https://github.com/search?q=" },
         { id: "youtube", name: "YouTube", icon: "material:play_circle", prefix: "yt", url: "https://www.youtube.com/results?search_query=" }
     ]
@@ -45,7 +44,7 @@ QtObject {
                     icon: e.icon,
                     comment: e.prefix ? ("Prefix: " + e.prefix) : "Default engine",
                     action: "info:",
-                    categories: ["Web Search"],
+                    categories: ["Quick Search"],
                     _preScored: 1000
                 };
             });
@@ -63,7 +62,7 @@ QtObject {
                 icon: "material:open_in_browser",
                 comment: url,
                 action: "open:" + url,
-                categories: ["Web Search"],
+                categories: ["Quick Search"],
                 _preScored: 1000
             }];
         }
@@ -87,7 +86,7 @@ QtObject {
                 icon: selectedEngine.icon,
                 comment: "Type your query",
                 action: "info:",
-                categories: ["Web Search"],
+                categories: ["Quick Search"],
                 _preScored: 1000
             }];
         }
@@ -100,7 +99,7 @@ QtObject {
             icon: selectedEngine.icon,
             comment: "Search " + selectedEngine.name,
             action: "open:" + selectedEngine.url + encodeURIComponent(searchQuery),
-            categories: ["Web Search"],
+            categories: ["Quick Search"],
             _preScored: 1000
         });
 
@@ -112,7 +111,7 @@ QtObject {
                     icon: engines[j].icon,
                     comment: "Search " + engines[j].name,
                     action: "open:" + engines[j].url + encodeURIComponent(searchQuery),
-                    categories: ["Web Search"],
+                    categories: ["Quick Search"],
                     _preScored: 900
                 });
             }

@@ -7,11 +7,11 @@ import qs.Modules.Plugins
 
 PluginSettings {
     id: root
-    pluginId: "dankWebSearch"
+    pluginId: "dankQuickSearch"
 
     StyledText {
         width: parent.width
-        text: I18n.tr("Web Search Settings")
+        text: I18n.tr("Quick Search Settings")
         font.pixelSize: Theme.fontSizeLarge
         font.weight: Font.Bold
         color: Theme.surfaceText
@@ -47,7 +47,7 @@ PluginSettings {
             StringSetting {
                 settingKey: "trigger"
                 label: I18n.tr("Trigger Prefix")
-                description: I18n.tr("Type this prefix to activate web search")
+                description: I18n.tr("Type this prefix to activate quick search")
                 placeholder: "!"
                 defaultValue: "!"
             }
@@ -59,7 +59,6 @@ PluginSettings {
                 options: [
                     { value: "duckduckgo", label: "DuckDuckGo" },
                     { value: "google", label: "Google" },
-                    { value: "wikipedia", label: "Wikipedia" },
                     { value: "github", label: "GitHub" },
                     { value: "youtube", label: "YouTube" }
                 ]
@@ -100,7 +99,7 @@ PluginSettings {
             }
 
             StyledText {
-                text: I18n.tr("g — Google\nw — Wikipedia\ngh — GitHub\nyt — YouTube\n\nType a URL directly to open it in your browser.")
+                text: I18n.tr("g — Google\ngh — GitHub\nyt — YouTube\n\nType a URL directly to open it in your browser.")
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.surfaceVariantText
                 wrapMode: Text.WordWrap

@@ -1,31 +1,31 @@
-# Contributing to DankWebSearch
+# Contributing to DankQuickSearch
 
 ## Development setup
 
 Prerequisites: [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) >= 1.4.0
 
 ```bash
-git clone https://github.com/alcxyz/DankWebSearch.git
-cd DankWebSearch
+git clone https://github.com/alcxyz/DankQuickSearch.git
+cd DankQuickSearch
 ```
 
 For development, symlink the plugin into the DMS plugins directory:
 
 ```bash
-ln -s "$(pwd)" ~/.config/DankMaterialShell/plugins/DankWebSearch
+ln -s "$(pwd)" ~/.config/DankMaterialShell/plugins/DankQuickSearch
 ```
 
 Reload after changes:
 
 ```bash
-dms ipc call plugins reload dankWebSearch
+dms ipc call plugins reload dankQuickSearch
 ```
 
 ## Project structure
 
 - `plugin.json` -- plugin manifest (id, type, trigger, permissions)
-- `DankWebSearch.qml` -- main launcher component (getItems, executeItem)
-- `DankWebSearchSettings.qml` -- settings UI
+- `DankQuickSearch.qml` -- main launcher component (getItems, executeItem)
+- `DankQuickSearchSettings.qml` -- settings UI
 
 ## Making changes
 

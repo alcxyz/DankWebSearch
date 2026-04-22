@@ -2,7 +2,7 @@
 
 **Status:** Accepted
 **Date:** 2026-04-22
-**Applies to:** `DankWebSearch.qml`
+**Applies to:** `DankQuickSearch.qml`
 
 ## Context
 
