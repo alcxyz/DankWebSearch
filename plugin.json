@@ -1,0 +1,19 @@
+{
+    "id": "dankWebSearch",
+    "name": "Web Search",
+    "description": "Search the web from the launcher with multiple engine support",
+    "version": "0.1.0",
+    "author": "alcxyz",
+    "icon": "travel_explore",
+    "type": "launcher",
+    "capabilities": ["launcher"],
+    "component": "./DankWebSearch.qml",
+    "settings": "./DankWebSearchSettings.qml",
+    "trigger": "!",
+    "requires_dms": ">=1.4.0",
+    "requires": ["xdg-open"],
+    "permissions": [
+        "settings_read",
+        "settings_write"
+    ]
+}
