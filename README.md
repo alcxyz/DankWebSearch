@@ -8,7 +8,7 @@ A minimal launcher plugin for [DankMaterialShell](https://github.com/AvengeMedia
 
 - Search DuckDuckGo, Google, GitHub, and YouTube from the launcher
 - Engine prefixes for quick switching (`g`, `gh`, `yt`)
-- Direct URL detection — type a URL to open it
+- Direct URL detection - type a URL to open it
 - Configurable default search engine
 
 ## Installation
@@ -25,7 +25,7 @@ inputs.dms-plugin-quicksearch = {
 ```
 
 ```nix
-programs.dank-material-shell.plugins.DankQuickSearch = {
+programs.dank-material-shell.plugins.dankQuickSearch = {
   enable = true;
   src = inputs.dms-plugin-quicksearch;
 };
@@ -39,11 +39,11 @@ Copy the plugin directory to `~/.config/DankMaterialShell/plugins/DankQuickSearc
 
 Activate with `!` (default trigger) in the DMS launcher, then:
 
-- `!hello world` — search DuckDuckGo for "hello world"
-- `!g hello world` — search Google
-- `!gh nix flake` — search GitHub
-- `!yt music video` — search YouTube
-- `!github.com` — open URL directly
+- `!hello world` - search DuckDuckGo for "hello world"
+- `!g hello world` - search Google
+- `!gh nix flake` - search GitHub
+- `!yt music video` - search YouTube
+- `!github.com` - open URL directly
 
 ## Requirements
 
