@@ -25,7 +25,7 @@ inputs.dms-plugin-quicksearch = {
 ```
 
 ```nix
-programs.dank-material-shell.plugins.DankQuickSearch = {
+programs.dank-material-shell.plugins.dankQuickSearch = {
   enable = true;
   src = inputs.dms-plugin-quicksearch;
 };
